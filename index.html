@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: #343a40; 
+            /* Dark color for the navbar */
+        }
+
+        .content-container {
+            background-color: #c6e3e4;
+            padding: 1rem; /* Add some padding */
+        }
+
+        .footer {
+            background-color: #343a40; /* Same color as the navbar */
+            color: white; /* Text color */
+            padding: 10px 0; /* Add some padding */
+            text-align: center; /* Center-align the content */
+            position: fixed; /* Fixed position */
+            width: 100%; /* Full width */
+            bottom: 0; /* Stick to the bottom */
+        }
+
+        .panel-link {
+            transition: background-color 0.3s;
+        }
+
+        .panel-link:hover {
+            background-color: #dcdcdc; /* Change the hover color to a bit darker */
+        }
+
+        .image-container {
+            background-color: #fff; /* Background color for the container */
+            padding: 1rem;
+            text-align: center; /* Center align contents */
+        }
+
+        .image-container img {
+            max-width: 100%; /* Adjusted max-width for the image */
+            height: 50%; /* Maintain aspect ratio */
+             /* Make the image a block element */
+            margin: auto; /* Center-align the image */
+            padding: 2px; /* Add some padding */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px; /* Prevent content from hiding behind the fixed footer */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="nav-link" href="#">Charges for Services</a>
+        <a class="nav-link" href="feedback.html">Feedback</a>
+        <div class="dropdown ml-auto">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Language
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Hindi</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid content-container">
+        <div class="row" style="margin-top: -15px;">
+            <div class="col-md-4 mb-3">
+                <div class="panel-link p-3">
+                    <a href="signup.html">New User</a>
+                </div>
+                <div class="panel-link p-3">
+                    <a href="login.html">Existing User</a>
+                </div>
+                <div class="panel-link p-3">
+                    <a href="NewConnection.html">New Connection</a>
+                </div>
+                <div class="panel-link p-3">
+                    <a href="Payment.html">Pay Electricity Bill</a>
+                </div>
+                <div class="panel-link p-3">
+                    <a href="History.html">Electric Bill History</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="image-container">
+                    <img src="istockphoto-1311503439-612x612.jpg" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2024 E-BILL@all rights reserved</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN (Required for dropdown functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

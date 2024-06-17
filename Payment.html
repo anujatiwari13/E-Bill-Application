@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payment</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #c6e3e4;
+        }
+        .navbar {
+            width: 100%;
+            position: fixed;
+            padding-left: 1%;
+            padding-right: 1%;
+            top: 0;
+        }
+        .nav-link.text-primary:hover {
+            color: #004085 !important; /* Darken the text color on hover */
+        }
+        .footer {
+            background-color: #181b1d; /* Same color as the navbar */
+            color: white; /* Text color */
+            padding: 10px 0; /* Add some padding */
+            text-align: center; /* Center-align the content */
+            position: fixed; /* Absolute position */
+            width: 100%; /* Full width */
+            bottom: 0; /* Stick to the bottom */
+        }
+        .content {
+            width: 100%;
+            max-width: 600px; /* Maximum width of the form container */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="nav-link text-primary mr-3" href="#">Charges for Services</a>
+        <a class="nav-link text-primary" href="feedback.html">Feedback</a>
+        <div class="dropdown ml-auto">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Language
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Hindi</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="content">
+            <h2 class="text-center">Bill Payment</h2>
+            <form action="/process-payment" method="post">
+                <div class="mb-3">
+                    <label for="registration-number" class="form-label">Registration Number:</label>
+                    <input type="text" class="form-control" id="registration-number" name="registration-number" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount:</label>
+                    <input type="number" class="form-control" id="amount" name="amount" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="billing-cycle" class="form-label">Billing Cycle:</label>
+                    <select class="form-select" id="billing-cycle" name="billing-cycle" required>
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="half-yearly">Half Yearly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Payment Option:</label><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment-option" id="netbanking" value="netbanking" required>
+                        <label class="form-check-label" for="netbanking">Net Banking</label><br>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment-option" id="debit-card" value="debit-card">
+                        <label class="form-check-label" for="debit-card">Debit Card or Credit Card</label><br>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment-option" id="upi" value="upi">
+                        <label class="form-check-label" for="upi">Other UPI Apps</label><br>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Proceed to Pay</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; 2024 E-BILL@all rights reserved</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Bootstrap JS + Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
